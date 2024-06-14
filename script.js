@@ -18,6 +18,8 @@ prevBtn.addEventListener("click", () => {
 const baseURL = "https://api.themoviedb.org/3/discover/movie";
 const Trending = async (page) => {
   spinner.classList.remove("hidden");
+  nextBtn.classList.add("hidden");
+  prevBtn.classList.add("hidden");
   const response = await axios(baseURL, {
     params: {
       include_adult: "true",
@@ -36,6 +38,8 @@ const Trending = async (page) => {
   const TotalPages = response.data.total_pages;
   try {
     spinner.classList.add("hidden");
+    nextBtn.classList.remove("hidden");
+    prevBtn.classList.remove("hidden");
     data.forEach((element) => {
       const MovieContainer = document.createElement("div");
       MovieContainer.addEventListener("click", () => {
