@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+    gap: 1em;
+}
+
+.movie-container {
+    cursor: pointer;
+    transition: all 1s;
+    margin: .5em;
+    position: relative;
+    border: 1px solid;
+    border-radius: .7em;
+    transition: all .4s;
+    width: 310px;
+    height: 460px;
+}
+
+.movie-container:hover {
+    scale: 1.03;
+}
+
+.movie-container img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: .7em;
+    border-top-right-radius: .7em;
+    border-bottom-left-radius: .7em;
+    border-bottom-right-radius: .7em;
+
+}
+
+.movie-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: grey;
+    font-size: 1.2em;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding: .4em;
+    border-bottom-left-radius: .7em;
+    border-bottom-right-radius: .7em;
+
+}
+
+.spinner {
+    padding-top: 50px;
+    border-left: 2px solid cornflowerblue;
+    display: block;
+    border-radius: 50%;
+    animation-name: spinner;
+    animation-duration: .9s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.spinner-container {
+    margin-top: 90px;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 1.23em;
+    gap: 1em;
+}
+
+.button-container button {
+    padding: .7em 2em;
+    font-family: 'Montserrat Alternates';
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    color: white;
+    background-color: cornflowerblue;
+    transition: all .2s;
+}
+
+.counter {
+    font-family: 'Montserrat Alternates';
+
+}
+.disabled{
+    visibility: hidden;
+}
+
+.button-container button:hover {
+    background-color: rgb(73, 114, 191);
+    box-shadow: 0 0 2px 0 black;
+
+}
+
+.button-container button:active {
+    scale: .9;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+
+}
+
+.arrow {
+  
+    border-radius: 50%;
+    cursor: pointer;
+    padding: .3em .5em;
+    width: 35px;
+    margin: 10px 50px;
+    animation-name: details;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .8s;
+    animation-fill-mode: backwards;
+    transition: all .4s;
+}
+
+.arrow:active, .arrow:hover{
+    background-color: rgb(199, 197, 197);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieInfo {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.MoviePoster {
+    margin-left: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Poster {
+    height: 90vh;
+    border-radius: 1em;
+    padding: .4em;
+    animation-name: poster;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+    animation-delay: .2s;
+    transition: all .4s;
+    animation-fill-mode: backwards;
+}
+
+.MovieDetails {
+    padding: 5em;
+    border-top-left-radius: .9em;
+    border-bottom-right-radius: .9em;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: details;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .8s;
+    animation-fill-mode: backwards;
+    transition: all .4s;
+}
+
+.MovieTitle {
+    font-family: monospace;
+    padding: .2em 2em;
+    font-size: 2em;
+}
+
+.ReleaseDate {
+    font-family: monospace;
+    padding: .5em;
+    font-size: 1.2em;
+}
+
+.Genre {
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: .4em;
+}
+
+.MovieOverview {
+    width: 500px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+.spinner {
+    padding-top: 50px;
+    border-left: 2px solid cornflowerblue;
+    display: block;
+    border-radius: 50%;
+    animation-name: spinner;
+    animation-duration: .9s;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.spinner-container {
+    margin-top: 90px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes poster {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes details {
+    from {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    * {
+        overflow: auto;
+    }
+
+    .MoviePoster {
+        margin: 0 auto;
+
+    }
+
+    .MovieDetails {
+        max-width: 300px;
+        border: none;
+        padding: 0;
+    }
+
+    .MovieOverview {
+        width: 300px;
+    }
+
+
+.Poster{
+    width: 500px;
+}
+    .MovieTitle {
+        text-align: center;
+    }
+}
+
+@media (max-width:500px) {
+    .Poster{
+        object-fit: cover;
+        width: 300px;
+        height: 500px;
+
+    }
+}
+
+@media (min-width: 1379px) {
+    *{
+        overflow: hidden;
+    }
+}

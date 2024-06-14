@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="details.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="size-6"
+        id="arrow"
+      >
+        <path
+          fillRule="evenodd"
+          d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div id="container" class="container"></div>
+    <div class="spinner-container">
+      <div class="spinner hidden" id="spinner"></div>
+    </div>
+
+    <script src="details.js"></script>
+  </body>
+</html>
